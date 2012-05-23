@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0.0">
+  <name>IMDb</name>
+  <description>A Simple Launcher for the IMDb Website</description>
+  <author href="http://www.twitter.com/BBSCrApps/" rim:copyright="Copyright 2010-2011 SCrApps">SCrApps</author>
+  <content src="index.html"/>
+   <feature id="blackberry.io.file" />
+   <feature id="blackberry.app" required="true" version="1.0.0" />
+   <feature id="blackberry.invoke" required="true" version="1.0.0"/>
+   <feature id="blackberry.invoke.BrowserArguments" required="true" version="1.0.0"/>
+   <feature id="blackberry.identity" required="true" version="1.0.0"/>
+   <feature id="blackberry.ui.dialog" required="true" version="1.0.0"/>
+   <feature id="blackberry.ui.dialog"/>
+   <feature id="blackberry.app.event" required="true" version="1.0.0.0"/>
+   <access subdomains="true" uri="*"/>
+   <rim:permit>access_shared</rim:permit>
+   <rimrientation mode="landscape"/>
+   <autoOrients>false</autoOrients>
+</widget>

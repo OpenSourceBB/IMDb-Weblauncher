@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no,initial-scale=1.0">
+	<title>IMDb</title>
+<style type="text/css" media="screen">
+  html, body {
+     position: absolute;
+     height: 100%;
+     max-height: 100%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+   }
+   iframe {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     border: none;
+   }
+   #topshadow {
+     box-shadow: 0 0 8px 0px #333;
+}
+  </style>
+</head>
+<BODY> 
+<iframe id="channels" src="http://www.imdb.com"></iframe>
+<div style="position: absolute; right: 5px; top: 5px;" >
+<div style="position: relative; top: 0px; left: -0px; width: 0px; height: 52px;">
+<a onclick="swipemenu.simulateSwipeEvent()"><img src="img/drop.png"/></a>
+</div></div>
+	<script>
+		function goBack() {
+			window.location = "javascript:history.go(-1)";
+		}
+		function goForward() {
+			window.location = "javascript:history.go(1)";
+		}
+		function goHome() {
+			window.location = "index.html";
+		}
+	</script>
+	<script src="swipemenu.js"></script>
+	<script>
+		window.addEventListener("load", function() {
+			if(swipemenu) {
+			
+				swipemenu.setMenuHeight(100);
+
+				swipemenu.addButton("Back", goBack, false, "img/back.png");
+				swipemenu.addButton("Forward", goForward, false, "img/forward.png");
+				swipemenu.addButton("Home", goHome, true, "img/home.png");
+				swipemenu.addButton("Close", swipemenu.close, true, "img/closebar.png");
+			}
+		}, false);
+	</script>
+</div>
+</body>
+</html>
